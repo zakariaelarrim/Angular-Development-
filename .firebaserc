@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cigma-c372b": {
+      "hosting": {
+        "Gallery": [
+          "cigma-c372b"
+        ]
+      }
+    }
+  }
+}

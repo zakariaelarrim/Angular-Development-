@@ -1,0 +1,81 @@
+.row-item{
+    border: solid 2.2px #9830B0;
+    border-radius: 8px; 
+}
+.row-item:hover{
+  background-color: rgb(243, 240, 240);
+}
+.image img{
+    max-height: 260px !important;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+}
+.temp-date{
+    font-weight: bold;
+    color: #FD940C;
+}
+.temp-title{
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 18px;
+}
+.temp-description{
+    color: #2c3e50;
+    font-weight: normal;
+    font-size: 18px;
+}
+.options{
+  width: fit-content;
+  border: solid 2.2px #9830B0;
+  border-radius: 8px;
+}
+span{
+  cursor:pointer
+}
+.icon-view{
+    color: #01a3a4;
+}
+.icon-download{
+  color: #5f27cd;
+}
+.icon-remove{
+  background-color: #ee5253;
+  color: white;
+  border: solid 1.8px #576574 !important;
+}
+.icon-remove:hover{
+  background-color: #ff6b6b;
+}
+.icon-edit{
+  background-color: #0abde3;
+  color: #c8d6e5;
+  border: solid 1.8px #576574 !important;
+}
+.icon-edit:hover{
+  background-color: #48dbfb;
+}
+.icon-disable{
+  background-color: #ff9f43;
+  color: #c8d6e5;
+  border: solid 1.8px #576574 !important;
+  cursor: pointer;
+}
+.icon-disable:hover{
+  background-color: #feca57;
+}
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

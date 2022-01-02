@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap'); */
+*{
+    /* font-family: 'Quicksand', sans-serif; */
+    margin:0px;
+    padding:0px;
+}
+.box{
+    width: 100%;
+    height: 100vh;
+    padding-top: 13%;
+    padding-left: 35%;
+    background-image: url('../../assets/img/image6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.788) !important;
+    /* border: solid 1.3px #7d5fff !important; */
+}
+.card label{
+    font-size: 15px !important;
+    color: #3d3d3d;
+}
+.card input{
+    font-size: 15px !important;
+    background-color: unset;
+    border:solid 1.4px #4b4b4bcb;
+    height: 40px;
+
+}
+.card .btn-default{
+    background-color: #7d5fff;
+    color:white;border-radius: unset;
+    border:solid 1.5px #7d5fff;
+    border-radius: 5px;
+    height: 40px; 
+}
+.card .btn-btn-default:hover{
+    border:solid 1.5px #7d5fff;
+    background-color: white;
+    color:#7d5fff;
+}
+.card p{
+    font-size:25px;
+    font-weight: bolder;
+    color: #7d5fff;
+}
+.card a{
+    cursor: pointer;
+}
+hr{
+     border: solid 2px #7d5fff;
+     width: 30%;
+     margin-bottom: 15px;
+}

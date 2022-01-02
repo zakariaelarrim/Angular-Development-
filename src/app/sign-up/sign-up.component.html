@@ -1,0 +1,40 @@
+<div class="box">
+    <div class="container">
+        <div class="container card p-4 col-md-6">
+            <form  class="needs-validation" novalidate #form="ngForm" (ngSubmit)="onSubmit()">  
+                <div class="text-center">
+                    <p>Sign up </p>
+                    <!-- <hr> -->
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 pe-2">
+                        <label for="firstName">First Name</label>
+                        <input type="text" ngModel class="form-control my-2" name="firstName" id="firstName">
+                    </div>
+                    <div class="form-group col-md-6 pe-2">
+                        <label for="firstName">Last Name</label>
+                        <input type="text" ngModel class="form-control my-2" name="lastName" id="lastName">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">Email</label>
+                    <input type="email" ngModel class="form-control my-2" name="email" id="email">
+                    <div class="invalid-feedback">
+                        The email already exist!
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">Password</label>
+                    <input type="password" ngModel class="form-control my-2" name="password" id="password">
+                </div>
+
+                <button class="btn btn-default my-3 px-5">Sign Up</button>
+                <a class="link float-end my-3" router-link="/login">I already have account</a>
+
+            </form>
+        </div>
+    </div>
+
+</div>

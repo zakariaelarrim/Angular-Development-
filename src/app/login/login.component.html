@@ -1,0 +1,26 @@
+<div class="box">
+    <div class="container">
+        <div class="container card p-4 col-md-5">
+            <form #form="ngForm" (ngSubmit)="onSubmit()">  
+                <div class="text-center">
+                    <p>Login </p>
+                    <!-- <hr> -->
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Email</label>
+                    <input required="true" type="email" ngModel class="form-control my-2" name="email" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">Password</label>
+                    <input required="true" type="password" ngModel class="form-control my-2" name="password" id="password">
+                </div>
+
+                <button type="submit" class="btn btn-default my-3 px-5">Login</button>
+                <a class="link float-end my-3" routerLink="/sign-up">Create an account</a>
+
+            </form>
+        </div>
+    </div>
+
+</div>

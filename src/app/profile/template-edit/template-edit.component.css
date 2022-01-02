@@ -1,0 +1,39 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 260px;
+    background: #fff;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+  }
+  .content{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 260px;
+    background-color: #EEEEEE;
+    min-height: 100vh;
+  }
+  .list .item:hover{
+    background-color: #EEEEEE; 
+  }
+  .list .item{
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .list .item span{
+    color: #FD940C;
+  }
+  form label{
+    margin-bottom: 8px;
+  }
+  .btn{
+    background-color: #9830B0 !important;
+    border-radius: 4px;
+  }
+  .progress-bar{
+    background-color: #17BCD0;
+  }

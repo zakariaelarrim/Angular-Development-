@@ -1,0 +1,61 @@
+<div class="card shadow p-5">
+    <div class="box-header p-3 shadow-sm">
+        <h3>List Of Templates</h3>
+    </div>
+    
+    <div class="row row-item p-4 shadow my-2" *ngFor = "let item of templates; let i = index;">
+        <div class="col-4 image" style="min-height: 150px;">
+            <img src="{{item.image}}" class="w-100 h-100" alt="">
+        </div>
+        <div class="col-8">
+            <p>
+                <!-- ------- create at -------  -->
+                <span class="temp-date">{{item.createAt}}</span> 
+                <!-- ------- downloads -------  -->
+                <span class="float-end mx-2 icon-download"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                        <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+                      </svg>
+                      {{item.downloads}}
+                </span>
+                <!-- ------- views -------  -->
+                <span class="float-end icon-view">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-eye-fill" viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                        <path
+                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                    </svg>
+                    {{item.views}}
+                </span>
+            </p>
+            <!-- ------- title -------  -->
+            <p class="temp-title">{{item.title}}</p>
+            <!-- ------- description -------  -->
+            <p class="temp-description"> {{item.description}} </p>
+            <div class="mt-2 p-2 options">
+                <!-- ------- edit -------  -->
+                <span class="badge rounded-pill text-light mx-3 icon-edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-pen-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+                    </svg>
+                </span>
+                <!-- ------- remove -------  -->
+                <span class="badge rounded-pill mx-3 icon-remove" role="button" (click)="onDelete(item.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-trash2-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z" />
+                    </svg>
+                </span>
+                <!-- ------- disable / enable -------  -->
+                <span class="mx-3 form-switch ">
+                        <input class="form-check-input icon-disable" style="height: 25px; width: 40px;" type="checkbox"
+                         [checked]="item.display" (change)="onChange(i)">
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

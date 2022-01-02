@@ -1,0 +1,53 @@
+<div class="card shadow p-5">
+    <div class="box-header p-3 shadow-sm">
+        <h3>Create new post template</h3>
+    </div>
+    <p class="text-dark fs-5">Enter the following fields</p>
+    <form #formTemplate="ngForm" (submit)="OnSubmit()">
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="title">Template Title <span class="text-danger fs-5">*</span></label>
+                <input required type="text" name="title" id="title" ngModel class="form-control">
+            </div>
+            <div class="form-group col-6">
+                <label for="extension">File Source Extension <span class="text-danger fs-5">*</span></label>
+                <select required name="extension" [(ngModel)]="extension" (change)="onExtChange()"
+                    id="extension" class="form-select">
+                    <option value="ai">Illustration</option>
+                    <option value="psd">Photoshop</option>
+                    <option value="image">Image</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Description <span class="text-secondary fs-6">( optional )</span></label>
+            <textarea required name="description" ngModel id="description" class="form-control" cols="30"
+                rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="images">Choose an illustrations images for the template <span
+                    class="text-danger fs-5">*</span></label>
+            <input required accept=".jpg, .jpeg, .png" type="file" name="images" ngModel id="images" class="form-control"
+                (change)="onImageChange($event)">
+        </div>
+        <div class="progress mb-3 col-6" *ngIf="imageFile">
+            <div class="progress-bar" role="progressbar" [ngStyle]="{'width': imageFile.percentage + '%' }"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                {{imageFile.percentage | number :'1.0-0'}}%</div>
+        </div>
+        <div *ngIf="sourceRequired">
+            <div class="form-group">
+                <label for="images">Choose File Source <span class="text-danger fs-5">*</span>( extension .zip or
+                    .rar)</label>
+                <input required accept=".zip, .rar" type="file" name="images" ngModel id="images" class="form-control"
+                    (change)="onFileSourceChange($event)">
+            </div>
+            <div class="progress mb-3 col-6" *ngIf="sourceFile">
+                <div class="progress-bar" role="progressbar" [ngStyle]="{'width': sourceFile.percentage + '%' }"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    {{sourceFile.percentage | number :'1.0-0'}}%</div>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit">Add the template</button>
+    </form>
+</div>
